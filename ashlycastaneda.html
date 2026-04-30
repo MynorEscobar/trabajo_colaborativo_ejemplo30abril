@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashly Castañeda - Portafolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff; /* AliceBlue */
+            color: #1a365d;
+        }
+        
+        /* Modern Gradient Navbar */
+        .navbar-custom {
+            background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+        }
+        
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Section with Glassmorphism */
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(13, 110, 253, 0.05), rgba(13, 202, 240, 0.1)), url('https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(13, 110, 253, 0.15);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(13, 110, 253, 0.25);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(13, 110, 253, 0.15);
+        }
+
+        .feature-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #e7f1ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #0d6efd;
+            font-size: 24px;
+        }
+
+        .btn-modern {
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            border: none;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-modern:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+            background: linear-gradient(135deg, #0a58ca 0%, #0d6efd 100%);
+        }
+
+        /* Footer */
+        .footer-custom {
+            background: #0a2540;
+            color: #adbac7;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-hexagon-fill me-2"></i>Ashly Castañeda</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list text-white fs-3"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center">
+                    <div class="glass-card">
+                        <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 shadow-sm">Bienvenido a mi espacio</span>
+                        <h1 class="display-4 fw-bold mb-4">Hola, soy <span class="text-gradient">Ashly Castañeda</span></h1>
+                        <p class="lead mb-5 text-muted">Diseñando experiencias digitales modernas, fluidas y elegantes. Transformando ideas en soluciones tecnológicas brillantes.</p>
+                        <a href="#servicios" class="btn btn-primary btn-modern btn-lg text-white">Ver Proyectos <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="container mt-5 pt-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Mis Servicios</h2>
+            <p class="text-muted">Soluciones a medida para tus necesidades</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="feature-icon-wrapper">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <h4 class="fw-bold">Desarrollo Web</h4>
+                    <p class="text-muted mb-0">Creación de sitios web responsivos, rápidos y optimizados para destacar en cualquier dispositivo.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="feature-icon-wrapper">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h4 class="fw-bold">Diseño UI/UX</h4>
+                    <p class="text-muted mb-0">Interfaces modernas y centradas en el usuario que garantizan una experiencia inolvidable.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="feature-icon-wrapper">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <h4 class="fw-bold">Optimización</h4>
+                    <p class="text-muted mb-0">Mejora del rendimiento y SEO para que tu proyecto alcance su máximo potencial en la web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container mt-5 pt-5 mb-5" id="contacto">
+        <div class="card border-0 rounded-4 overflow-hidden" style="background: linear-gradient(135deg, #e7f1ff 0%, #cff4fc 100%);">
+            <div class="card-body p-5 text-center">
+                <h3 class="fw-bold mb-3 text-primary">¿Listo para comenzar tu próximo proyecto?</h3>
+                <p class="mb-4 text-muted">Contáctame hoy mismo y hagamos realidad esa idea.</p>
+                <button class="btn btn-outline-primary btn-lg rounded-pill px-4 fw-bold">Hablemos <i class="bi bi-chat-dots ms-2"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-custom text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 Ashly Castañeda. Todos los derechos reservados.</p>
+            <div>
+                <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-github fs-4"></i></a>
+                <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                <a href="#" class="text-white text-decoration-none"><i class="bi bi-twitter-x fs-4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
