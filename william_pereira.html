@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Pereira - Galería de Fondos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            /* Fondo oscuro elegante */
+            color: #f8fafc;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 80px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+            background: -webkit-linear-gradient(#38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        /* Grid de la galería */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .wallpaper-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            background-color: #1e293b;
+            display: block;
+        }
+
+        .wallpaper-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+            z-index: 10;
+        }
+
+        .wallpaper-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .wallpaper-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .wallpaper-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .wallpaper-item:hover .wallpaper-overlay {
+            opacity: 1;
+        }
+
+        .wallpaper-title {
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .wallpaper-item:hover .download-btn {
+            opacity: 1;
+        }
+
+        .download-btn:hover {
+            background: white;
+            color: #0f172a;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">William Pereira</h1>
+            <p class="lead mt-3 text-secondary" style="color: #cbd5e1 !important;">Descarga los fondos de pantalla más
+                espectaculares del país.</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="gallery-grid">
+            <!-- Imagen 1 -->
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Antigua_-_Arco.jpg/1920px-Antigua_-_Arco.jpg"
+                target="_blank" class="wallpaper-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Antigua_-_Arco.jpg/960px-Antigua_-_Arco.jpg"
+                    alt="Antigua Guatemala" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Antigua Guatemala</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Imagen 2 -->
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Tikal_3.jpg/1920px-Tikal_3.jpg"
+                target="_blank" class="wallpaper-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Tikal_3.jpg/960px-Tikal_3.jpg"
+                    alt="Ruinas de Tikal" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Ruinas de Tikal</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Imagen 3 -->
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semuc_Champey%2C_Guatemala.jpg/1920px-Semuc_Champey%2C_Guatemala.jpg"
+                target="_blank" class="wallpaper-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semuc_Champey%2C_Guatemala.jpg/960px-Semuc_Champey%2C_Guatemala.jpg"
+                    alt="Semuc Champey" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Semuc Champey</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Imagen 4 -->
+            <a href="https://tse2.mm.bing.net/th/id/OIP.rc8cVJrMosKa8bpxE2b88AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                target="_blank" class="wallpaper-item">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.rc8cVJrMosKa8bpxE2b88AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Volcán de Fuego" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Volcán de Fuego</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Imagen 5 -->
+            <a href="https://upload.wikimedia.org/wikipedia/commons/7/7c/Santo_Tomas_Church%2C_Chichicastenango.jpg"
+                target="_blank" class="wallpaper-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Santo_Tomas_Church%2C_Chichicastenango.jpg"
+                    alt="Chichicastenango" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Chichicastenango</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Imagen 6 -->
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Palacio_Municipal_de_Quetzaltenango.jpg/1920px-Palacio_Municipal_de_Quetzaltenango.jpg"
+                target="_blank" class="wallpaper-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Palacio_Municipal_de_Quetzaltenango.jpg/960px-Palacio_Municipal_de_Quetzaltenango.jpg"
+                    alt="Quetzaltenango" loading="lazy">
+                <div class="wallpaper-overlay">
+                    <h3 class="wallpaper-title">Quetzaltenango</h3>
+                </div>
+                <div class="download-btn" title="Descargar Fondo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
