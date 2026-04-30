@@ -1,7 +1,7 @@
 /* Bryan Yaquian Custom Styles */
 .hero-banner {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wp-uploads.qualbert.com/2022/03/Divider.png');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     animation: bannerFade 2s ease-in-out;
